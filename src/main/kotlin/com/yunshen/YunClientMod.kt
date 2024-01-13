@@ -1,10 +1,11 @@
 package com.yunshen
 
+import com.yunshen.YunMod.logger
 import net.fabricmc.api.ClientModInitializer
 
 object YunClientMod: ClientModInitializer {
 
     override fun onInitializeClient() {
-        println("启动成功")
+        logger.info("启动成功")
     }
 }

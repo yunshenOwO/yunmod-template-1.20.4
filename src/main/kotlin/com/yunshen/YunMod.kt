@@ -1,19 +1,16 @@
 package com.yunshen
 
 import com.yunshen.item.ItemRegistry
-import com.yunshen.item.ItemRegistry.CUSTOM_ITEM
-import com.yunshen.item.ModItemGroups
 import net.fabricmc.api.ModInitializer
-import net.fabricmc.fabric.api.registry.FuelRegistry
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
 
 object YunMod : ModInitializer {
-	const val MODID = "yunmod"
-
-
+	val logger: Logger = LoggerFactory.getLogger("yunmod")
 	override fun onInitialize() {
-		ModItemGroups.addGroup(CUSTOM_ITEM)
 		ItemRegistry.registriesItemAll()
-		FuelRegistry.INSTANCE.add(CUSTOM_ITEM, 300) //让物品可作为燃料
+		ItemRegistry.addOtherEffect()
+
 	}
 }
