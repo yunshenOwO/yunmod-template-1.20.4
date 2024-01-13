@@ -26,12 +26,6 @@
 				"value": "com.yunshen.YunClientMod",
 				"adapter": "kotlin"
 			}
-		],
-		"fabric-datagen": [
-			{
-				"value": "com.yunshen.YunModDataGenerator",
-				"adapter": "kotlin"
-			}
 		]
 	},
 	"mixins": [
