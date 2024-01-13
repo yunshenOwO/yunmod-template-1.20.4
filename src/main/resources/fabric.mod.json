@@ -1,0 +1,50 @@
+{
+	"schemaVersion": 1,
+	"id": "yunmod",
+	"version": "${version}",
+	"name": "yunMod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"云深不知处"
+	],
+	"contact": {
+		"homepage": "https://yunshenowo.github.io/about.html",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/yunmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.yunshen.YunMod",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "com.yunshen.YunClientMod",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "com.yunshen.YunModDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"yunmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": ">=1.9.22"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
