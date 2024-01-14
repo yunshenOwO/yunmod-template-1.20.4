@@ -11,6 +11,7 @@ object YunMod : ModInitializer {
 	override fun onInitialize() {
 		ItemRegistry.registriesItemAll()
 		ItemRegistry.addOtherEffect()
+		logger.info("物品加载完成")
 
 	}
 }
