@@ -18,12 +18,12 @@ object ItemRegistry {
         Registries.ITEM, Identifier(MODID, "custom_item"), ModItem(
         FabricItemSettings()
     ))
-    val CUSTOM_ARMOR_MATERIAL: ArmorMaterial = CustomArmorMaterial()
-    val CUSTOM_MATERIAL = ModItem(Item.Settings())
-    val CUSTOM_MATERIAL_HELMET: Item = ArmorItem(CUSTOM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, Item.Settings())
-    val CUSTOM_MATERIAL_CHESTPLATE: Item = ArmorItem(CUSTOM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, Item.Settings())
-    val CUSTOM_MATERIAL_LEGGINGS: Item = ArmorItem(CUSTOM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, Item.Settings())
-    val CUSTOM_MATERIAL_BOOTS: Item = ArmorItem(CUSTOM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, Item.Settings())
+    private val CUSTOM_ARMOR_MATERIAL: ArmorMaterial = CustomArmorMaterial()
+    private val CUSTOM_MATERIAL = ModItem(Item.Settings())
+    private val CUSTOM_MATERIAL_HELMET: Item = ArmorItem(CUSTOM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, Item.Settings())
+    private val CUSTOM_MATERIAL_CHESTPLATE: Item = ArmorItem(CUSTOM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, Item.Settings())
+    private val CUSTOM_MATERIAL_LEGGINGS: Item = ArmorItem(CUSTOM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, Item.Settings())
+    private val CUSTOM_MATERIAL_BOOTS: Item = ArmorItem(CUSTOM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, Item.Settings())
     fun registriesItemAll(){
         Registry.register(Registries.ITEM_GROUP, Identifier(MODID, "test_group"), ModItemGroups.ITEM_GROUP) //注册物品栏
         Registry.register(Registries.ITEM, Identifier(MODID, "custom_material"), CUSTOM_MATERIAL)
